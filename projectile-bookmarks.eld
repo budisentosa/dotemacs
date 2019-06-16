@@ -1,0 +1,1 @@
+("~/Documents/docker_odoo_dev/avasoft_addons/" "~/Documents/ubuntuodoo9/o_addons/" "~/" "~/org/")

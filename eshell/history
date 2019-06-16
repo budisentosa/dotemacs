@@ -1,0 +1,3 @@
+cd ..
+docker exec -it odoo bash
+exit

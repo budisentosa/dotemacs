@@ -1,1 +1,1 @@
-("~/Documents/docker_odoo_dev/avasoft_addons/" "~/Documents/ubuntuodoo9/o_addons/" "~/" "~/org/")
+("~/Documents/docker_odoo_dev/avasoft_addons/" "~/.emacs.d/" "~/Dropbox/orgzly/" "~/.emacs.d_dariIAN/" "~/Documents/ubuntuodoo9/o_addons/" "~/")

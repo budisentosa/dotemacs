@@ -1,1 +1,3 @@
-((magit-reset nil))
+((magit-dispatch nil)
+ (magit-pull nil)
+ (magit-reset nil))

@@ -38,11 +38,16 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(evil-escape-delay 0.2)
+ '(evil-escape-key-sequence "jk")
+ '(evil-escape-mode t)
  '(flycheck-check-syntax-automatically (quote (save idle-change)))
  '(flycheck-idle-change-delay 4)
+ '(global-evil-visualstar-mode t)
  '(package-selected-packages
    (quote
-    (org-bullets org indent-guide counsel ivy evil-magit magit avy spaceline company flycheck neotree helm-projectile helm-rg general which-key helm evil use-package))))
+    (evil-matchit evil-visualstar evil-nerd-commenter imenus org-bullets org indent-guide counsel ivy evil-magit magit avy spaceline company flycheck neotree helm-projectile helm-rg general which-key helm evil use-package)))
+ '(setq-default evil-escape-key-sequence t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -55,7 +60,6 @@
   :ensure t
   :config
   (evil-mode 1)
-  (define-key evil-insert-state-map "jk" 'evil-normal-state)
   (define-key evil-normal-state-map [escape] 'keyboard-quit)
   (define-key evil-visual-state-map [escape] 'keyboard-quit)
   (define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
@@ -80,6 +84,7 @@
   (define-key evil-motion-state-map "go" 'evil-avy-goto-char-2)
   (define-key evil-normal-state-map "go" 'evil-avy-goto-char-2)
   )
+
 
 
 ;; Theme
@@ -188,6 +193,9 @@
     "b"  '(:ignore t :which-key "Buffer")
     "bb"  '(helm-mini :which-key "buffers list")
     "bd"  'kill-buffer-and-window
+    "bn"  'next-buffer
+    "bp"  'previous-buffer
+    "bk"  'kill-buffer
     ;; org
     "o"  '(:ignore t :which-key "Org")
     "oa"  'org-archive-subtree
@@ -217,6 +225,19 @@
     "at"  '(ansi-term :which-key "open terminal")
     "g"  '(:ignore t :which-key "Git")
     "gs" '(magit-status :which-key "git status")
+    ;; imenu
+    "ji" 'helm-imenu
+    ;; nerd-commenter
+    "c"  '(:ignore t :which-key "Comment")
+    "ci" 'evilnc-comment-or-uncomment-lines
+    "cl" 'evilnc-quick-comment-or-uncomment-to-the-line
+    "cl" 'evilnc-quick-comment-or-uncomment-to-the-line
+    "cc" 'evilnc-copy-and-comment-lines
+    "cp" 'evilnc-comment-or-uncomment-paragraphs
+    "cr" 'comment-or-uncomment-region
+    "cv" 'evilnc-toggle-invert-comment-line-by-line
+    "."  'evilnc-copy-and-comment-operator
+    "\\" 'evilnc-comment-operator ; if you prefer backslash key
 ))
 
 ;; Flycheck
